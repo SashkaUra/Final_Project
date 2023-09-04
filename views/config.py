@@ -1,4 +1,4 @@
 your_host=""
-user_ID="t"
+user_ID=""
 passwd =""
 
