@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Data access
+{% endblock %}
+
+{% block content %}
+ <div class="main"> 
+  <div class="container">
+   <p>Please, choose WMO ID of the station, date and observation time you would like to download</p><br>
+      <p>By clicking on the marker on the map you will find out name of the station and its' WMO ID</p>
+    <div class="col-1-2">
+	<h2>Select parameters</h2>
+	<table>
+	 <tr>
+	 <th>Station</th>
+	 <th>Year</th>
+	 <th>Month</th>
+	 <th>Day</th>
+	 <th>Time</th>
+	 </tr>
+	 <TR>
+     <FORM METHOD="POST" action="#">
+     <TD><INPUT NAME="STNM" value="26063" size="6">
+	 <TD><SELECT NAME="YEAR">
+     <OPTION SELECTED>2023
+     <OPTION>2022
+     <OPTION>2021
+     <OPTION>2020
+     <OPTION>2019
+     <OPTION>2018
+     <OPTION>2017
+     <OPTION>2016
+     <OPTION>2015
+     <OPTION>2014
+     <OPTION>2013
+     <OPTION>2012
+     <OPTION>2011
+     <OPTION>2010
+     <OPTION>2009
+     <OPTION>2008
+     <OPTION>2007
+     <OPTION>2006
+     <OPTION>2005
+     <OPTION>2004
+     <OPTION>2003
+     <OPTION>2002
+     <OPTION>2001
+     <OPTION>2000
+     <OPTION>1999
+     <OPTION>1998
+     <OPTION>1997
+     <OPTION>1996
+     <OPTION>1995
+     <OPTION>1994
+     <OPTION>1993
+     <OPTION>1992
+     <OPTION>1991
+     <OPTION>1990
+     <OPTION>1989
+     <OPTION>1988
+     <OPTION>1987
+     <OPTION>1986
+     <OPTION>1985
+     <OPTION>1984
+     <OPTION>1983
+     <OPTION>1982
+     <OPTION>1981
+     <OPTION>1980
+     <OPTION>1979
+     <OPTION>1978
+     <OPTION>1977
+     <OPTION>1976
+     <OPTION>1975
+     <OPTION>1974
+     <OPTION>1973
+     </SELECT>
+     <TD><SELECT NAME="MONTH">
+     <OPTION VALUE="01">Jan
+     <OPTION VALUE="02">Feb
+     <OPTION VALUE="03">Mar     
+     <OPTION VALUE="04">Apr
+     <OPTION VALUE="05">May
+     <OPTION VALUE="06">Jun
+     <OPTION VALUE="07">Jul
+     <OPTION VALUE="08">Aug
+     <OPTION VALUE="09" SELECTED>Sep
+     <OPTION VALUE="10">Oct
+     <OPTION VALUE="11">Nov
+     <OPTION VALUE="12">Dec
+     </SELECT>
+     <TD><SELECT NAME="DAY">
+     <OPTION VALUE="01">01
+     <OPTION VALUE="02">02
+	 <OPTION VALUE="03">03
+     <OPTION VALUE="04">04
+	 <OPTION VALUE="05">05
+     <OPTION VALUE="06">06
+	 <OPTION VALUE="07">07
+     <OPTION VALUE="08">08
+	 <OPTION VALUE="09">09
+     <OPTION VALUE="10">10
+	 <OPTION VALUE="11">11
+     <OPTION VALUE="12">12
+	 <OPTION VALUE="13">13
+     <OPTION VALUE="14">14
+	 <OPTION VALUE="15">15
+     <OPTION VALUE="16">16
+	 <OPTION VALUE="17">17
+	 <OPTION VALUE="18">18
+     <OPTION VALUE="19">19
+	 <OPTION VALUE="20">20
+     <OPTION VALUE="21">21
+	 <OPTION VALUE="22">22
+     <OPTION VALUE="23">23
+	 <OPTION VALUE="24">24
+     <OPTION VALUE="25">25
+	 <OPTION VALUE="26">26
+     <OPTION VALUE="27">27
+	 <OPTION VALUE="28">28
+     <OPTION VALUE="29">29
+	 <OPTION VALUE="30">30
+     <OPTION VALUE="31">31
+     </SELECT>
+     <TD><SELECT NAME="Observation">
+     <OPTION VALUE="00">00Z
+     <OPTION VALUE="12">12Z
+     </SELECT>
+     </TABLE>
+      <button type="submit" NAME="Download">Download csv</button>
+    </div>
+	<div class="col-1-2"> 
+    <iframe class="map", src="/map" width="500" height="500"></iframe>
+    </div> 
+  </div> 
+ </div> 
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Stations' metadata
+{% endblock %}
+
+{% block content %}
+
+<div class="main">
+ <div class="container">
+  <div class="col-1-1">
+    <table class="stnm_info">
+    <caption>Detailed information about radiosonde stations in {{ country }}</caption><br><br>
+   <tr>
+    <th>WMO ID</th>
+    <th>Station name</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Altitude</th>
+    <th>Started operating in</th>
+    <th>Ended operating in</th>
+   </tr>
+   <tbody>
+   {% for row in cont %}
+    <tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+    <td>{{ row[3] }}</td>
+    <td>{{ row[4] }}</td>
+    <td>{{ row[5] }}</td>
+    <td>{{ row[6] }}</td>
+    </tr>
+   {% endfor %}
+   </tbody>
+   </table>
+  </div>
+  <div class="col-1-2">
+    <a class="cta" href="/station_info"><button>Back</button></a>
+  </div>
+ </div>
+</div>
+{% endblock %}
+

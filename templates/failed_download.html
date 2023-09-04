@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Data access
+{% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
+<h2>No data found</h2>
+<span><a href="/access_to_data">GO BACK</a></span>
+
+{% endblock %}
