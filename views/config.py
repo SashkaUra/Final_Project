@@ -1,4 +1,4 @@
-your_host="localhost"
-user_ID="root"
-passwd ="Goedemorgen2021!"
+your_host=""
+user_ID="t"
+passwd =""
 
